@@ -7,6 +7,8 @@ import NoPage from "./features/noPage/NoPage.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Vacations from "./features/vacations/Vacations.tsx";
 import Dashboard from "./features/Dashboard.tsx";
+import ManageProfiles from "./features/profiles/ManageProfiles.tsx";
+
 // Ensure this matches the file name
 const queryClient = new QueryClient();
 function App() {
@@ -19,6 +21,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="/vacations" element={<Vacations />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profiles" element={<ManageProfiles />} />
         </Routes>
       </Router>
     </QueryClientProvider>

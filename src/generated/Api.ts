@@ -1188,6 +1188,7 @@ export class Api<
         method: "POST",
         body: data,
         type: ContentType.Json,
+        format: "json",
         ...params,
       }),
 
@@ -1203,6 +1204,7 @@ export class Api<
       this.request<ProfileObject, any>({
         path: `/profiles/${profileId}`,
         method: "GET",
+        format: "json",
         ...params,
       }),
 
@@ -1234,6 +1236,7 @@ export class Api<
       this.request<ProfileSkillObject[], any>({
         path: `/profile-skill`,
         method: "GET",
+        format: "json",
         ...params,
       }),
 
@@ -1387,6 +1390,7 @@ export class Api<
       this.request<CategoryObject[], any>({
         path: `/categories`,
         method: "GET",
+        format: "json",
         ...params,
       }),
 
