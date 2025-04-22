@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Vacations from "./features/vacations/Vacations.tsx";
 import Dashboard from "./features/Dashboard.tsx";
 import ManageProfiles from "./features/profiles/ManageProfiles.tsx";
+import ManageProjects from "./features/project/ManageProjects.tsx";
 
 // Ensure this matches the file name
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ function App() {
           <Route path="/vacations" element={<Vacations />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profiles" element={<ManageProfiles />} />
+          <Route path="/project" element={<ManageProjects />} />
         </Routes>
       </Router>
     </QueryClientProvider>
