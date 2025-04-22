@@ -1,12 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import FloatingButtons from "./FloatingButtons";
 import SelectActionCard from "./Cards";
-// import { useGetPets } from "../services/useApiTest";
+import { ResourceObject } from "../generated/Api";
 
-export default function SkillGrid() {
-  // const { data } = useGetPets();
+interface SkillProps {
+  resource: ResourceObject;
+}
 
-  // console.log(data);
+export default function SkillGrid({ resource }: SkillProps) {
+  const skills = resource.skills ?? [];
 
   return (
     <Box>
@@ -20,23 +22,14 @@ export default function SkillGrid() {
         <Typography variant="h5" component="h2">
           Skills Section
         </Typography>
-        <FloatingButtons></FloatingButtons>
+        <FloatingButtons />
       </Box>
 
-      <Box
-        component="form"
-        // sx={{
-        //   "& .MuiTextField-root": { m: 1, width: "25ch" },
-        //   display: "grid",
-        //   gridTemplateColumns: "auto auto auto", // 2 columns
-        //   columnGap: 0,
-        //   maxWidth: "60ch",
-        //   // mx: "auto",
-        // }}
-        noValidate
-        autoComplete="off"
-      ></Box>
-      <SelectActionCard></SelectActionCard>
+      <Box component="form" noValidate autoComplete="off">
+        {/* Form content if needed */}
+      </Box>
+
+      <SelectActionCard skills={skills} />
     </Box>
   );
 }

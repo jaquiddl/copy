@@ -2,7 +2,7 @@ import PageLayout from "../../components/PageLayout.tsx";
 import { Box } from "@mui/material";
 import FormPropsTextFields from "../../components/Form.tsx";
 import SkillGrid from "../../components/SkillGrid.tsx";
-import { ResourceObject } from "../../generated/Api";
+import { SkillObject } from "../../generated/Api";
 import { useEffect } from "react";
 import { useGetResourceById } from "../../services/ResourceService.ts";
 
@@ -22,10 +22,10 @@ const HomePage = () => {
         }}
       >
         <Box sx={{ flex: 1, minWidth: 0 }}>
-          <FormPropsTextFields>resource={resource?.data}</FormPropsTextFields>
+          {resource?.data && <FormPropsTextFields resource={resource.data} />}
         </Box>
         <Box sx={{ flex: 1, minWidth: 0 }}>
-          <SkillGrid />
+          {resource?.data && <SkillGrid resource={resource.data} />}
         </Box>
       </Box>
     </PageLayout>

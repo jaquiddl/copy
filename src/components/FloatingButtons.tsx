@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Fab } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import DialogWithSelector from "./SkillDialog.tsx";
+import { useGetAllSkills, useGetAllCategories } from ../s
 
 const categories = [
   { label: "FrontEnd", value: "frontend" },
@@ -26,6 +27,9 @@ export default function ExampleWithFabAndSelector() {
     skill: "",
     level: "",
   });
+
+  const { data: skillsData } = useGetAllSkills();
+  const { data: categoriesData } = useGetAllCategories();
 
   const handleClick = () => setOpen(true);
 
@@ -58,3 +62,5 @@ export default function ExampleWithFabAndSelector() {
     </>
   );
 }
+
+

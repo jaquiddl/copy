@@ -36,17 +36,13 @@ export default function FormPropsTextFields(props: ResourceProps) {
         <TextField
           id="field-1"
           label="Name"
-          defaultValue="Mock User"
-          slotProps={{
-            input: {
-              readOnly: true,
-            },
-          }}
+          defaultValue={props.resource.firstName ?? "N/A"}
+          slotProps={{ input: { readOnly: true } }}
         />
         <TextField
           id="field-2"
           label="Last name"
-          defaultValue="Mock User"
+          defaultValue={props.resource.lastName ?? "N/A"}
           slotProps={{
             input: {
               readOnly: true,
@@ -56,7 +52,17 @@ export default function FormPropsTextFields(props: ResourceProps) {
         <TextField
           id="field-3"
           label="ID"
-          defaultValue="Mock User"
+          defaultValue={props.resource.id ?? "N/A"}
+          slotProps={{
+            input: {
+              readOnly: true,
+            },
+          }}
+        />
+        <TextField
+          id="field-8"
+          label="Username"
+          defaultValue={props.resource.user ?? "N/A"}
           slotProps={{
             input: {
               readOnly: true,
@@ -66,7 +72,7 @@ export default function FormPropsTextFields(props: ResourceProps) {
         <TextField
           id="field-4"
           label="Location"
-          defaultValue="Mock User"
+          defaultValue={props.resource.location ?? "N/A"}
           slotProps={{
             input: {
               readOnly: true,
@@ -76,7 +82,7 @@ export default function FormPropsTextFields(props: ResourceProps) {
         <TextField
           id="field-5"
           label="Job title"
-          defaultValue="Mock User"
+          defaultValue={props.resource.jobTitle ?? "N/A"}
           slotProps={{
             input: {
               readOnly: true,
@@ -86,7 +92,7 @@ export default function FormPropsTextFields(props: ResourceProps) {
         <TextField
           id="field-6"
           label="Experience"
-          defaultValue="Mock User"
+          defaultValue={props.resource.experience ?? "N/A"}
           slotProps={{
             input: {
               readOnly: true,
@@ -96,17 +102,7 @@ export default function FormPropsTextFields(props: ResourceProps) {
         <TextField
           id="field-7"
           label="Allocation"
-          defaultValue="Mock User"
-          slotProps={{
-            input: {
-              readOnly: true,
-            },
-          }}
-        />
-        <TextField
-          id="field-8"
-          label="Profile"
-          defaultValue="Mock User"
+          defaultValue="active"
           slotProps={{
             input: {
               readOnly: true,

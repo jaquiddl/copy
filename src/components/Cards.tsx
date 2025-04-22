@@ -6,46 +6,13 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { Skill } from "../generated/Api";
 
-const cards = [
-  {
-    id: 2,
-    title: "Skill",
-    description: "Level",
-  },
-  {
-    id: 3,
-    title: "Skill",
-    description: "Level",
-  },
-  {
-    id: 3,
-    title: "Skill",
-    description: "Level",
-  },
-  {
-    id: 3,
-    title: "Skill",
-    description: "Level",
-  },
-  {
-    id: 3,
-    title: "Skill",
-    description: "Level",
-  },
-  {
-    id: 3,
-    title: "Skill",
-    description: "Level",
-  },
-  {
-    id: 3,
-    title: "Skill",
-    description: "Level",
-  },
-];
+interface SelectActionProps {
+  skills: Skill[];
+}
 
-function SelectActionCard() {
+function SelectActionCard({ skills }: SelectActionProps) {
   const [selectedCard, setSelectedCard] = React.useState(-1);
   return (
     <Box
@@ -56,7 +23,7 @@ function SelectActionCard() {
         gap: 2,
       }}
     >
-      {cards.map((card, index) => (
+      {skills.map((skill, index) => (
         <Card>
           <CardActionArea
             onClick={() => setSelectedCard(index)}
@@ -73,11 +40,11 @@ function SelectActionCard() {
           >
             <CardContent sx={{ height: "100%" }}>
               <Typography variant="h6" component="div">
-                {card.title}
+                {skill.name}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              {/* <Typography variant="body2" color="text.secondary">
                 {card.description}
-              </Typography>
+              </Typography> */}
             </CardContent>
           </CardActionArea>
         </Card>
