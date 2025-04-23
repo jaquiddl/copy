@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 
-const pages = ["vacations", "Projects"];
+const pages = ["vacations", "projects", "profiles"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {

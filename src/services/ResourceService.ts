@@ -6,9 +6,6 @@ export const useGetResources = () => {
   const query = useQuery({
     queryKey: ["resources"],
     queryFn: () => getAPI().resources.getAllResources(),
-    // select: (response) => {
-    //   return response.data;
-    // },
   });
   return query;
 };

@@ -1059,6 +1059,8 @@ export class Api<
       this.request<ProjectObject[], any>({
         path: `/projects`,
         method: "GET",
+        type: ContentType.Json,
+        format: "json",
         ...params,
       }),
 
