@@ -146,6 +146,7 @@ const ManageProfiles = () => {
     if (editId) {
       updateProfile.mutate({ ...form, id: editId });
     } else {
+      console.log("Creating profile with form: ", form);
       createProfile.mutate(form);
     }
   };

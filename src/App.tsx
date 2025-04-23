@@ -9,8 +9,6 @@ import Vacations from "./features/vacations/Vacations.tsx";
 import Dashboard from "./features/Dashboard.tsx";
 import ManageProfiles from "./features/profiles/Profiles.tsx";
 import ManageProjects from "./features/project/Projects.tsx";
-import CreateResourcePage from "./features/resource/Resource.tsx";
-import ListResourcesPage from "./features/resource/ListResourcesPage.tsx";
 
 
 // Ensure this matches the file name
@@ -27,8 +25,6 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profiles" element={<ManageProfiles />} />
           <Route path="/projects" element={<ManageProjects />} />
-          <Route path="/resource" element={<CreateResourcePage />} />
-          <Route path="/list" element={<ListResourcesPage/>} />
         </Routes>
       </Router>
     </QueryClientProvider>
